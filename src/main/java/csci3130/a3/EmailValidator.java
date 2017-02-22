@@ -13,7 +13,7 @@ public class EmailValidator {
 	}
 
 	/**
-<<<<<<< HEAD
+<<<<<<< HEAD 
 	 * @param emailAddress the emailAddress to set
 =======
 	 * @param emailAddress the emailAddress to set  
