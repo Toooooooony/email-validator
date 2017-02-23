@@ -26,9 +26,12 @@ public class EmailValidator {
 	public boolean isValid(){
 		boolean b1 = isOneAt(emailAddress);
 		boolean b2 = isPoint(emailAddress);
-		boolean result = b1 && b2;
+		boolean b3 = isValidDomainName(emailAddress);
+		boolean b4 = isStartWithLowercase(emailAddress);
+		boolean result = b1 && b2 && b3 && b4;
 		return result;
 	}
+	
 	public boolean isOneAt() {
 		return isOneAt(emailAddress);
 	}
