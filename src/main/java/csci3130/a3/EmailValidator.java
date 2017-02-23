@@ -15,7 +15,7 @@ public class EmailValidator {
 	/**
 <<<<<<< HEAD 
 	 * @param emailAddress the emailAddress to set
-=======
+======= 
 	 * @param emailAddress the emailAddress to set  
 >>>>>>> fa0a3d6 a3-stage1
 	 */

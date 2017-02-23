@@ -1,4 +1,5 @@
 package csci3130.a3;
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;
