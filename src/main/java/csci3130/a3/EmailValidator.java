@@ -63,7 +63,7 @@ public class EmailValidator {
 		String validDomainName[] = {"com","gov","edu","org","net","biz"};
 		String last3chars = forTest.substring(forTest.length() - 3);
 		for(int i=0;i<validDomainName.length;i++){
-			if(validDomainName[0].equals(last3chars)){
+			if(validDomainName[i].equals(last3chars)){
 				result = true;
 				break;
 			}
