@@ -1,5 +1,5 @@
 package csci3130.a3;
-
+import java.lang.String;
 public class EmailValidator {
 	private String emailAddress = "";
 
@@ -29,6 +29,19 @@ public class EmailValidator {
 		boolean result = b1 && b2;
 		return result;
 	}
+	public boolean isOneAt() {
+		return isOneAt(emailAddress);
+	}
+	public boolean isPoint() {
+		return isPoint(emailAddress);
+	}
+	public boolean isValidDomainName(){
+		return isValidDomainName(emailAddress);
+	}
+	public boolean isStartWithLowercase(){
+		return isStartWithLowercase(emailAddress);
+		
+	}
 	
 	public boolean isOneAt(String forTest) {
 		boolean checkIfExit = forTest.contains("@");
@@ -39,6 +52,25 @@ public class EmailValidator {
 	
 	public boolean isPoint(String forTest) {
 		boolean result = forTest.contains(".");
+		return result;
+	}
+	
+	public boolean isValidDomainName(String forTest){
+		boolean result = false;
+		String validDomainName[] = {"com","gov","edu","org","net","biz"};
+		String last3chars = forTest.substring(forTest.length() - 3);
+		for(int i=0;i<validDomainName.length;i++){
+			if(validDomainName[0].equals(last3chars)){
+				result = true;
+				break;
+			}
+		}
+		return result;
+	}
+	
+	public boolean isStartWithLowercase(String forTest){
+		boolean result = false;
+		result = Character.isLowerCase(forTest.charAt(0));
 		return result;
 	}
 }
