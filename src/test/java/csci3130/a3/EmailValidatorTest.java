@@ -1,5 +1,4 @@
 package csci3130.a3;
-
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -54,6 +53,42 @@ public class EmailValidatorTest {
 		boolean except = false;
 		String forTest = "testtestcom";
 		boolean result = ev.isPoint(forTest);
+		assertFalse(except != result);
+	}
+	
+	@Test
+	public void testIsValidDomainName1() {
+		EmailValidator ev = new EmailValidator();
+		boolean except = true;
+		String forTest = "test@test.com";
+		boolean result = ev.isValidDomainName(forTest);
+		assertFalse(except != result);
+	}
+	
+	@Test
+	public void testIsValidDomainName2() {
+		EmailValidator ev = new EmailValidator();
+		boolean except = false;
+		String forTest = "test@test.cam";
+		boolean result = ev.isValidDomainName(forTest);
+		assertFalse(except != result);
+	}
+	
+	@Test
+	public void testIsStartWithLowercase1() {
+		EmailValidator ev = new EmailValidator();
+		boolean except = true;
+		String forTest = "test@test.com";
+		boolean result = ev.isStartWithLowercase(forTest);
+		assertFalse(except != result);
+	}
+	
+	@Test
+	public void testIsStartWithLowercase2() {
+		EmailValidator ev = new EmailValidator();
+		boolean except = false;
+		String forTest = "Test@test.com";
+		boolean result = ev.isStartWithLowercase(forTest);
 		assertFalse(except != result);
 	}
 	
